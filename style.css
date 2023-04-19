@@ -12,36 +12,39 @@ body{
 .header-container{
     background: #F5F5F5;
     display: flex;
+    flex-direction: row;
 
 }
 .logo-container{
-    position: absolute;
-    width: 11rem;
-    height: 5.5rem;
-    left: 6.5rem;
-    top: 2.1rem;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    padding-right: 1em;
+    width: 11em;
+    height: 5.5em;
+    margin-left: 5em;
+    margin-top: 2em;
     background: #D9D9D9;
 }
 .logo{
-    
-    width: px;
-    height: 3.2rem;
-
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    font-size: 32px;
+    font-size: 2em;
     letter-spacing: 0.02em;
     border: none;
-    padding-left: 3.7rem;
-    padding-top: 1.5rem;
-    top: 50rem;
-    left: 50rem;
     
     color: #000000;
     background: #D9D9D9;
 }
-
+ul{
+    display: flex;
+    list-style: none;
+    gap:2rem;
+}
+ul li:hover{
+    color:#434343;
+}
 
 .menu-container{
     /* border: 2px solid black; */
@@ -54,6 +57,7 @@ body{
 .menu-upper-container{
     /* border: 2px solid green; */
     padding-top: 1rem;
+    padding-right: 10%;
     height: 2rem;
     display: flex;
     align-items: end;
@@ -72,6 +76,7 @@ body{
 }
 .menu-lower-container{
     padding-top: 0rem;
+    padding-right: 12%;
     height: 5rem;
     /* border: 2px solid red; */
     display: flex;
@@ -140,7 +145,7 @@ color: #434343;
 
     font-style: normal;
     font-family: 'PT Sans';
-    font-size: 18px;
+    font-size: 1.15rem;
     font-weight: 700;
     letter-spacing: 0.02em;
     line-height: 27px;
@@ -152,13 +157,13 @@ color: #434343;
     border: 1px solid #434343;
     font-family: 'PT Sans';
     font-weight: 700;
-    font-size: 18px;
+    font-size: 1.15rem;
     box-sizing: border-box;
     min-width: fit-content;
     min-height: fit-content;
-    border-radius: 30px;
+    border-radius: 1.92rem;
     padding: 0.2rem 1rem 0.2rem 1rem;
-    line-height: 27px;
+    line-height: 1.725rem;
 }
 .fiction{
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), #DC3636;
@@ -283,8 +288,11 @@ color: #434343;
     font-style: normal;
     line-height: 25px;
     letter-spacing: 0.02em;
-    
 }
+#dots , #myBtn{
+    display: none;
+}
+
 .sec-right-sec{
     max-width: 27%;
     font-family:'PT Sans';
@@ -500,13 +508,17 @@ padding-bottom: 2rem;
 
 letter-spacing: 0.02em;
 }
+.fa-brands{
+    margin: 0 0.5rem 0 0.5rem;
+}
 .sec-footer{
     display: flex;
-    gap:50rem;
     align-items: center;
+    justify-content: space-between;
 }
 .a-sec-footer{
     font-family: 'PT Sans';
+    min-width: fit-content;
 font-style: normal;
 font-weight: 700;
 font-size: 0.95rem;
@@ -515,25 +527,27 @@ letter-spacing: 0.05em;
 }
 .search{
     display: flex;
-    max-width: fit-content;
+    max-width: 27rem;
 }
 #email{
-    width: 22rem;
+    width: 27rem;
     height:3.36rem;
     border-radius: 1.78rem;
     padding-left: 1rem;
+    margin-right: 2.7rem;
 }
 .search button{
-    /* position: absolute; */
-    /* z-index: -2px; */
-    left:100.3rem;
+    position:absolute;
+    border: none;
+    align-items: end;
     height:3.06rem;
-    margin-top: 0.1rem;
+    margin-top: 0.2rem;
     color: #FFFFFF;
     background: #F39B4E;
     border-radius: 1.78rem;
     padding: 1rem 2rem 1rem 2rem;
     font-size: 1.15rem;
+    right:5rem;
 }
 .third-footer{
     padding-top: 3rem;
@@ -553,13 +567,20 @@ line-height: 1.788rem;
     justify-content: space-between;
     gap: 20rem;
 }
+.right-fourth-foo{
+    margin-right: 2.7rem;
+}
 .left-child{
     padding-top: 1rem;
 }
 .fifth-footer{
     padding-top: 2rem;
     display: flex;
+    align-items: center;
     justify-content: space-between;
+}
+.right-fifth-foo{
+    margin-right: 2.7rem;
 }
 
 /* icons............................. */
@@ -569,3 +590,313 @@ line-height: 1.788rem;
 .fa-circle-user{
     padding-top: 0.34rem;
 }
+#menu-bar{
+    display:none;
+}
+.fa-bars{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 20px;
+    padding-top: 20px;
+}
+
+/* media Query............................................................. */
+@media only screen and (max-width:700px){
+    *{
+        padding: 0;
+        margin: 0;
+        font-size: small;
+    }
+    #menu-bar{
+        display: inline-block;
+        position: absolute;
+        top:-0.2rem;
+    }
+    .logo-container{
+        height: 2rem;
+        width: 6rem;
+        font-size: 0.5rem;
+        margin-left: 1rem;
+        padding-left: 1rem;;
+    }
+    .logo{
+
+        flex-direction: column;
+        
+    }
+    .menu-lower-container{
+        display: none;
+        font-size: x-small;
+        justify-content:space-between;
+        max-width: fit-content;
+        flex-wrap: wrap;
+
+    }
+    .first-sec , .second-sec{
+        max-width: 80%;
+        margin-left: 10%;
+        margin-top: 1rem;
+
+    }
+    .upper-left{
+        padding-left: 0rem;
+        width: 100%;
+    }
+    .texts{
+        padding: 1rem 0 0 0;
+        text-align: center;
+        justify-content: center;
+        font-size: small;
+    }
+    .upper{
+        display: flex;
+        flex-direction: column;
+    }
+    .buttons{
+        padding:1rem 0 0 1rem;
+        gap:1rem;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        flex-wrap: wrap;
+    }
+    .david , .fiction , .advanced{
+        max-width: fit-content;
+    }
+    .Reduced-rate{
+        font-size: 1.2rem;
+       margin-left: 11%;
+       margin-right: 12%;
+    }
+    .lower{
+        display: flex;
+        flex-direction: column;
+        min-width: fit-content;
+        padding: 2rem 0 2rem 2rem;
+        gap:1rem;
+    }
+    .vertical-line{
+        display: none;
+    }
+    .second-sec{
+        display: flex;
+        flex-direction: column;
+    }
+    .sec-left-sec{
+        padding: 1rem 1rem 1rem 1rem;
+    }
+    #dots , #myBtn{
+        display: inline;
+        flex-direction: row;
+    }
+    #more{
+        display: none;
+    }
+    .sec-left-sec{
+        width: 90%;
+    }
+    .sec-right-sec{
+        width: 100;
+        max-width: 100%;
+        padding: 1rem 1rem 1rem 1rem;
+    }
+    .share{
+        padding-top: 2rem;
+    }
+    .quote{
+        font-size: small;
+    }
+    .quote_container img{
+        max-width: 1rem;
+    }
+    .fourth-sec{
+        margin-top: 1rem;
+        padding:2rem 0.5rem 0 0.5rem;
+    }
+    .learn-more{
+        gap:1rem;
+    }
+    .learn{
+        font-size: xx-small;
+    }
+    .third-fifth {
+        display: flex;
+        flex-direction: column;
+        gap:0rem;
+    }
+    .seventh-fifth {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .seventh-child{
+        padding-bottom: 0rem;
+    }
+    .fifth-sec{
+        padding-left: 5%;
+    }
+    .footer{
+        padding-top: 2rem;
+        padding-left: 2rem;
+        padding-bottom: 1rem;
+    }
+    .fir-footer {
+        padding-left: 0rem;
+    }
+    .sec-footer{
+        display: flex;
+        flex-direction: column-reverse;
+        gap:1rem;
+        align-items: normal;
+    }
+    .a-sec-footer{
+        font-size: xx-small;
+        padding-left: 0rem;
+    }
+    .third-footer{
+        padding-top: 1rem;
+    }
+    .fourth-footer{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding-bottom: 0rem;
+    }
+    .a{
+        display: block;
+    }
+    .review{
+        margin-bottom: 2rem;
+    }
+    .menu-icon{
+        gap: 0.5rem;
+    }
+    .menu-upper-container{
+        gap:2rem;
+        padding-bottom:0.2rem;
+    }
+    .logo-container{
+        margin-left: 2.5rem;
+        width: 4rem;
+        margin-bottom: 1rem;
+    }
+    .fa-bars{
+        position: absolute;
+        left: 2%;
+        top:2.5%
+    }
+
+    .right-nav ul li{
+        display:block;
+    }
+    .right-nav{
+        position:absolute;
+        background: #a7abe7ef;
+        height: 100vh;
+        width: 200px;
+        top:0;
+        right:-200px;
+        text-align: left;
+        z-index: 2;
+        transition: 0.5s;
+    }
+    header .fas{
+        display: block;
+        color: black;
+        margin:10px;
+        font-size: 22px;
+        cursor: pointer;
+       
+    }
+    .right-nav ul{
+        padding: 30px;
+    }
+    
+
+}
+
+
+
+
+
+
+/* for Tablets................................................................. */
+@media  only screen and (min-width:700px) and (max-width:1354px){
+    body{
+        font-size: small;
+    }
+    .logo-container{
+        margin-right: 3rem;
+        padding-right: 0rem;
+    }
+    .menu-lower-container{
+        font-size: small;
+        padding-right: 2%;
+    }
+    ul{
+        gap:1rem;
+    }
+    .texts{
+        font-size: x-large;
+    }
+    .sec-footer{
+        display: flex;
+        flex-direction: column;
+    }
+    .upper{
+        padding-right: 1rem;
+    }
+    .buttons{
+        display: flex;
+        flex-direction: column;
+        width: max-content;
+        gap: 1rem;
+        padding-left: 2rem;
+    }
+    .lower{
+        padding: 1rem 1.5rem 1rem 1.5rem;
+
+    }
+    .sec-left-sec{
+        padding:1.5rem;
+    }
+    .content{
+    }
+    .sec-right-sec{
+        max-width: 35%;
+    }
+    .review{
+        width: fit-content;
+        margin-left: 0rem;
+        padding-left: 0.2rem;
+
+    }
+    .share{
+        padding-top: 1rem;
+    }
+    .learn-more{
+        gap:1rem;
+    }
+    .seventh-fifth{
+        gap:1.5rem;
+        padding-left: 0rem;
+        padding-right: 0rem;
+    }
+    .footer{
+        padding:1rem 2rem 1rem 2rem;
+    }
+    .fourth-footer{
+        gap:10rem;
+    }
+    .sec-footer{
+        display: flex;
+        flex-direction: column-reverse;
+        gap:2rem;
+    }
+    .fir-footer{
+        display: flex;
+       align-items: center;
+    }
+}
+
